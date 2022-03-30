@@ -11,6 +11,7 @@ git 命令：
 		git status
 	四.查看修改的内容或不同：
 		git diff
+		git diff HEAD --<filename> 可以查看工作区和版本库里最新版本的区别
 	五.版本回退：
 		1.查看历史记录：git log(可以加入--pretty=online 使的整洁)
 			(一大串字符的是版本号)
@@ -21,5 +22,12 @@ git 命令：
 			git reset --hard <版本号>（不用写全，前几位就可以了）
 		4.查看命令历史：
 			git reflog (记录了每一次命令）
-			
+	六.工作区和暂存区
+		1.工作区：
+			在电脑里能看到的目录。
+		2.版本库：
+			工作区隐藏目录 .git 里存有（stage）暂存区和git自动创建的第一个分支master，以及指向master的指针HEAD
+		3.git add 和 git commit
+			git add 将文件修改添加到暂存区，git commit 将暂存区的所有内容添加到当前分支
+			如果不用 git add 到暂存区，就不会加入到commit中
 		
