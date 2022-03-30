@@ -1,0 +1,25 @@
+Git 学习
+git 命令：
+	一.创建版本库：
+		git init
+		（需要在你想创建的目录下打开终端输入命令来创建）
+	二.把文件添加到版本库：
+		第一步：git add <filename> (写文件名时去掉尖括号）
+		第二步：git commit -m "此处输入说明"
+		ps:可以用add添加多个文件，用commit一次提交
+	三.查看仓库当前的状态：
+		git status
+	四.查看修改的内容或不同：
+		git diff
+	五.版本回退：
+		1.查看历史记录：git log(可以加入--pretty=online 使的整洁)
+			(一大串字符的是版本号)
+		2.回退：
+			git reset --hard HEAD^
+			(上一个版本的HEAD^,上上个版本为HEAD^^,往上很多版本的，比如往上100个版本，写成HEAD^100)
+		3.回退了再回去：
+			git reset --hard <版本号>（不用写全，前几位就可以了）
+		4.查看命令历史：
+			git reflog (记录了每一次命令）
+			
+		
